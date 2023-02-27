@@ -61,7 +61,7 @@ function App() {
     setOpacity('opacity-100');
     setScale('scale-100');
     }
-  },[done])
+  },[done,error])
 
   const View = ()=>{
     if(done){
