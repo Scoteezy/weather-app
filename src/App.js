@@ -12,6 +12,7 @@ function App() {
   const [error,setError] = useState(false);
   const [done, setDone] = useState(false);
   const [height,setHeight] = useState('h-[70px]');
+  const [xlheight, setXlHeight] = useState('h-[98px]')
   const [opacity, setOpacity] = useState('opacity-0');
   const [scale, setScale] = useState('scale-0');
   const _ApiKey = '5dfa69c7f0107dfd85b2fcbb2d10f13e';
@@ -60,6 +61,7 @@ function App() {
   useEffect(()=>{
     if(done || error){
     setHeight('h-600px');
+    setXlHeight('h-650px');
     setOpacity('opacity-100');
     setScale('scale-100');
     }
@@ -106,8 +108,8 @@ function App() {
   }
   return (
     <div className="flex justify-center items-center w-full h-[100vh] ">
-      <div className={`${height} w-full xs:w-[370px] xl:w-[600px] m-auto bg-white rounded-3xl overflow-hidden transition duration-700 ease-linear`}>
-        <form onSubmit={onSubmit} className='flex items-center justify-center'>
+      <div className={`xl:${xlheight} ${height}  w-full xs:w-[370px] xl:w-[600px] m-auto bg-white rounded-3xl overflow-hidden transition duration-700 ease-linear`}>
+        <form onSubmit={onSubmit} className='flex items-center justify-center xl'>
           <PointerIcon  style={{'width': '30px', 'height' : '40px', 'color' : '#06283D'}}/>
             <input value={city} onChange={(e)=>{setCity(e.target.value)}} type="text" placeholder="Enter Your Location" className="xl:text-3xl xl:my-[15px] my-[5px] text-stone-900 text-lg placeholder-gray-800 py-4 pl-3 focus:outline-none font-poppins"/>
             <button className='bg-blue-100 rounded-full p-1 hover:bg-blue-300 transition-all duration-700' > <SearchIcon style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}}/> </button>
