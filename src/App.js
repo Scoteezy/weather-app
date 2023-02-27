@@ -53,7 +53,9 @@ function App() {
   }
   const onSubmit =(e)=>{
     e.preventDefault();
-    onLoad();
+    if(city!==''){
+      onLoad();
+    }
   }
   useEffect(()=>{
     if(done || error){
@@ -108,7 +110,7 @@ function App() {
         <form onSubmit={onSubmit} className='flex items-center justify-center'>
           <PointerIcon  style={{'width': '30px', 'height' : '40px', 'color' : '#06283D'}}/>
             <input value={city} onChange={(e)=>{setCity(e.target.value)}} type="text" placeholder="Enter Your Location" className="xl:text-3xl xl:my-[15px] my-[5px] text-stone-900 text-lg placeholder-gray-800 py-4 pl-3 focus:outline-none font-poppins"/>
-            <button className='bg-blue-100 rounded-full p-1' > <SearchIcon style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}}/> </button>
+            <button className='bg-blue-100 rounded-full p-1 hover:bg-blue-300 transition-all duration-700' > <SearchIcon style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}}/> </button>
         </form>
         <View/>
        
