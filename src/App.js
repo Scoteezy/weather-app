@@ -68,24 +68,24 @@ function App() {
       return(
         <div className={`text-center font-poppins`}>
           <div className={`${scale} ${opacity} fadeIn`}>
-          <img src={imgUrl} alt="weather" className='w-[60%] mx-auto'/>
-          <h1 className='text-6xl font-semibold pt-6'>{temperature}</h1>
-          <h2 className='pt-1 text-xl font-semibold '>{descr}</h2>
+          <img src={imgUrl} alt="weather" className='w-[60%] xl:w-[70%] mx-auto'/>
+          <h1 className='text-6xl font-semibold xl:text-7xl pt-6'>{temperature}</h1>
+          <h2 className='pt-1 text-xl font-semibold xl:text-3xl'>{descr}</h2>
           </div>
           <div className={`flex justify-around py-5 ${scale} ${opacity}`}>
             <div className='flex items-center'>
               <WaterIcon style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}}/>
               <div className='flex flex-col ml-2 items-start'>
-                <span className='text-xl font-semibold'>{humidity}</span>
-                Humidity
+                <span className='text-xl xl:text-5xl font-semibold'>{humidity}</span>
+                <span className='xl:text-2xl'>Humidity</span> 
               </div>
               
             </div>
             <div className='flex items-center'>
               <WindIcon style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}} />
               <div className='flex flex-col ml-2 items-start'>
-                <span className='text-xl font-semibold'>{windSpeed}</span>
-                Wind Speed
+                <span className='text-xl xl:text-5xl font-semibold'>{windSpeed}</span>
+                <span className='xl:text-2xl'>Wind Speed</span>
               </div>
             </div>
           </div>
@@ -104,11 +104,11 @@ function App() {
   }
   return (
     <div className="flex justify-center items-center w-full h-[100vh] ">
-      <div className={`${height} w-[370px] m-auto bg-white rounded-3xl overflow-hidden transition duration-700 ease-linear`}>
+      <div className={`${height} w-full xs:w-[370px] xl:w-[600px] m-auto bg-white rounded-3xl overflow-hidden transition duration-700 ease-linear`}>
         <form onSubmit={onSubmit} className='flex items-center justify-center'>
           <PointerIcon  style={{'width': '30px', 'height' : '40px', 'color' : '#06283D'}}/>
-            <input value={city} onChange={(e)=>{setCity(e.target.value)}} type="text" placeholder="Enter Your Location" className="my-[5px] text-stone-900 text-lg placeholder-gray-800 py-4 pl-3 focus:outline-none font-poppins"/>
-            <button className='bg-blue-100 rounded-full p-1' > <SearchIcon  style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}}/> </button>
+            <input value={city} onChange={(e)=>{setCity(e.target.value)}} type="text" placeholder="Enter Your Location" className="xl:text-3xl xl:my-[15px] my-[5px] text-stone-900 text-lg placeholder-gray-800 py-4 pl-3 focus:outline-none font-poppins"/>
+            <button className='bg-blue-100 rounded-full p-1' > <SearchIcon style={{'width': '30px', 'height' : '30px', 'color' : '#06283D'}}/> </button>
         </form>
         <View/>
        
