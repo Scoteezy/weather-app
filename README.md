@@ -10,3 +10,4 @@ Live Prewiev: [Click Here](https://weather-app-self-chi.vercel.app//)
 ## 🤝  Contributing
 Contributions, issues and feature requests are welcome! 😍
 ## ✨ Dont forget to give repo a star!
+## ❌ NOT AVIALIBLE AT PHONE NOW 
